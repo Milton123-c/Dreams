@@ -1,0 +1,612 @@
+/* fuentes  */
+@import url('https://fonts.googleapis.com/css2?family=Julee&family=Libre+Baskerville&family=Pacifico&family=Playfair+Display:ital,wght@0,400;1,600&display=swap');
+/* fin of fuentes */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+html {
+    height: 100%;
+}
+
+
+
+:root {
+    --background: #2196f3;
+    --color1: #f44336;
+    --color2: #2196f3;
+}
+
+
+
+
+body {
+    height: 100%;
+    background-image: linear-gradient(to right top, #0ccb45, #00b597, #0098db, #0072ee, #2a38be);
+    background-repeat: no-repeat;
+}
+
+nav:nth-child(1) h2 {
+    font-family: 'Pacifico', cursive;
+    color: rgb(209, 224, 209);
+    width: max-content;
+    margin-left: 150px;
+    margin-top: 14px;
+}
+
+.links>a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px 2px 15px;
+    border-radius: 0px 0px 10px 10px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    transition: .25s linear;
+    margin-bottom: 15px;
+}
+
+.links>a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background: #2196f3;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f44336, #2196f3);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f44336, #2196f3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+
+.links>a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.links:last-child {
+    margin-right: 150px;
+}
+
+.links {
+
+    width: 100%;
+    margin-top: 20px;
+    text-align: end;
+
+
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+}
+
+/* animando el fono  */
+
+.nav-background {
+
+    background: var(--background);
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--color1), var(--color2));
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, var(--color1), var(--color2));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.header-title {
+    margin-top: 90px;
+    padding: 0px 40px 0px 40px;
+    display: inline-flex;
+
+}
+
+.header-title article {
+
+    display: block;
+
+}
+
+.imagen-titulo {
+    height: 500px;
+    background-image: url("/image/img-1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    width: 600px;
+
+}
+
+.contenido-titulo {
+    position: relative;
+    width: 680px;
+    background-color: #0099db4d;
+}
+
+
+.contenido-titulo div {
+    margin: 0;
+    padding: 0px 10px 0px 10px;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.contenido-titulo h1 {
+    text-align: center;
+    color: rgb(243, 249, 250);
+    font-size: 44px;
+
+}
+
+.contenido-titulo p {
+    color: aliceblue;
+    line-height: 40px;
+    margin-top: 10px;
+}
+
+.contenido-titulo a {
+    margin-top: 15px;
+    font-size: 35px;
+    margin-right: 24px;
+    transition: 0.5s ease-in-out;
+}
+
+.contenido-titulo a:hover {
+    color: wheat;
+}
+
+.dreams {
+    position: relative;
+    margin-top: 14px;
+    height: 800px;
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: rgb(252, 252, 252);
+    text-align: center;
+    background-image: linear-gradient(to right top, #cb0cc4, #ff0060, #e26800, #9d9e00, #2abe5c);
+    background-repeat: no-repeat;
+
+}
+
+.card {
+    position: relative;
+    width: calc(1000px / 4);
+    text-align: left;
+    overflow: hidden;
+    border-radius: 10px;
+    background-image: linear-gradient(to right top, #cb0cc4, #ff0060, #e26800, #9d9e00, #2abe5c);
+    background-repeat: no-repeat;
+
+}
+
+.imagen {
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.card-title {
+    font-family: 'Playfair Display', serif;
+}
+
+.card-container {
+    padding: 10px;
+}
+
+.card button {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #3537ca;
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.card button:hover {
+    background-color: #1b0691;
+
+}
+
+.collapse {
+    position: absolute;
+    top: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.432);
+    transform: translateY(0%);
+    transition: transform 1s ease-in-out;
+}
+
+
+.card button>i {
+    color: white;
+    animation: color .10s ease-in-out;
+}
+
+.card button:hover>i {
+    color: #8e28ec;
+}
+
+.dreams article {
+    display: inline-block;
+}
+
+.img:hover +.collapse {
+    transform: translateY(-150%);
+}
+
+/* #prueva{
+    transform: translateX(-500px);
+    transform: rotateY();
+} */
+
+/* animando el hover de las imagenes */
+
+.img{
+    transform: scale(1);
+    transform: rotate3d(0, 0, 0, 0);
+
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.img:hover{
+    transform: scale(1.2);
+
+}
+
+
+/* visual image  */
+
+
+
+.visual-image {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    text-align: center;
+    background: #000000de;
+    background: -webkit-linear-gradient(to right, #434343d3, #000000de);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343d3, #000000de);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100%;
+
+}
+
+.visual-image img {
+    position: absolute;
+    max-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.visual-image h3 {
+    color: black;
+
+}
+
+.visual-content-image {
+    position: relative;
+    width: 100%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.visual-image a {
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(177, 58, 58);
+}
+
+.centro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-color: #0072ee;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 50%;
+
+}
+
+.centro span {
+    position: absolute;
+    left: 40%;
+    transform: translate(-50%);
+    background-color: white;
+    height: 140px;
+    width: 5px;
+
+}
+
+.flecha {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background-color: #111;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+
+}
+
+.flecha i {
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+}
+
+.centro span {
+    top: -20px;
+    animation: rotacion 0.8s infinite;
+}
+
+@keyframes rotacion {
+    0% {
+        transform: rotate(0);
+
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* estilos al boton cerrar  */
+
+.cerrar {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 66px;
+    height: 36px;
+    overflow: hidden;
+   
+}
+
+.cerrar button {
+    background-color: #111;
+    color: white;
+    border: none;
+    position: relative;
+    display: table;
+    cursor: pointer;
+    width: 63px;
+    height: 33px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cerrar button i {
+    display: inline-block;
+
+    vertical-align: middle;
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+
+}
+.cerrar button:hover i{
+    transform: scale(1.1);
+    
+}
+
+
+@keyframes rotate {
+    0%{
+        filter: hue-rotate(0deg);
+    }   
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+.cerrar button:hover ~ span:nth-child(2)::before{
+
+    transform: translate(100%, 100%);
+    animation: rotate 1.5s linear infinite;
+
+}  
+.cerrar button:hover ~ span:nth-child(3)::before{
+    transform: translate(100%, -100%);
+}
+
+.cerrar span::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(to right top, #cb0cc4, #ff0060, #e26800, #9d9e00, #2abe5c);
+    
+}
+
+.cerrar  span:nth-child(2)::before{
+    content: '';
+    height: 50%;
+    width: 50%;
+    top: -50%;
+    left: -50%;
+    background-color: wheat;
+    transform: translate(0, 0);
+    transition: transform 0.5s ease-in-out;
+}
+
+.cerrar  span:nth-child(3)::before{
+    content: '';
+    height: 50%;
+    width: 50%;
+    bottom: -50%;
+    left: -50%;
+    background-color: wheat;
+    transform: translate(0, 0);
+    transition: transform 0.5s ease-in-out;
+}
+
+.cerrar  span:nth-child(4)::before{
+    content: '';
+    height: 50%;
+    width: 50%;
+    top: -50%;
+    right: -50%;
+    background-color: wheat;
+    transform: translate(0, 0);
+    transition: transform 0.5s ease-in-out;
+}
+.cerrar button:hover ~ span:nth-child(4)::before{
+    transform: translate(-100%, 100%);
+    
+    animation: rotate 1.5s linear infinite;
+}
+
+.cerrar  span:nth-child(5)::before{
+    content: '';
+    height: 50%;
+    width: 50%;
+    bottom: -50%;
+    right: -50%;
+    background-color: wheat;
+    transform: translate(0, 0);
+    transition: transform 0.5s ease-in-out;
+}
+.cerrar button:hover ~ span:nth-child(5)::before{
+    transform: translate(-100%, -100%);
+}
+
+
+/* estilos para la targeta del sueño  */
+.card{
+    position: relative;
+}
+
+.leer{
+  
+    
+    position: absolute;
+    background-color: white;
+    background-image: linear-gradient(to right top, #051937, #3d205b, #840664, #c5004d, #eb1214);
+    width: 240px ;
+    top: 0;
+    left: -100%;
+    padding: 5px;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.header-leer{
+    display: inline-block;
+    width: 100%;
+}
+.header-leer div{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.header-leer img{
+    width: 100%;
+    
+}
+
+.fecha-carta{
+    position: absolute;
+    width: max-content;
+    top: 20px;
+    right: 5px;
+    color: rgba(175, 177, 177, 0.692);
+}
+
+.header-leer h4{
+    margin-top: 55px;
+    color: #8e28ec;
+
+}
+
+.header-leer h4 > span{
+    color: #e0deeb;
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+}
+
+.header-leer i{
+    padding: 0 10px 5px;
+
+}
+
+.titulo-texto{
+    background-image: linear-gradient(to right top, #051937, #3d205b, #840664, #c5004d, #eb1214);
+    padding: 5px;
+    color: rgb(226, 222, 222);
+}
+
+.dreams-contents{
+    padding: 5px;
+    height: 230px;
+    overflow: scroll;
+}
+.dreams-contents p{
+    line-height: 25px;
+    
+}
+
+
+  .dreams-contents::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .dreams-contents::-webkit-scrollbar-track {
+    background-color: rgba(231, 12, 78, 0.548);
+  }
+  
+  .dreams-contents::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 5px;
+  }
+  
+  .dreams-contents::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa;
+  }
+  
+  .dreams-contents::-webkit-scrollbar-button {
+    display: none;
+  }
+  
+  .dreams-contents::-webkit-scrollbar-corner {
+    background-color: #f2f2f2;
+  }
+  
