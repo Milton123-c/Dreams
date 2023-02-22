@@ -1,0 +1,96 @@
+/* Estilo base del botón */
+.btn-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    color: #007bff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: #111;
+    position: relative;
+
+  }
+
+  .central-boton{
+    position: absolute;
+  }
+   .izquierdo{
+    top: 50%;
+    left: 50px;
+  }
+  .derecho{
+    top: 50%;
+    right: 50px;
+  }
+  
+  /* Capa adicional para cubrir el borde */
+  .btn-circle::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+
+  }
+  
+  /* Estilo del texto */
+  .btn-text {
+    position: absolute;
+    width: 74px;
+    height: 74px;
+    z-index: 99;
+    background-color: #111;
+    color: wheat;
+    border-radius: 50%;
+  }
+
+  .btn-text  i{
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 70px;
+    transition: transform 0.2s ease-out;
+  }
+  
+  .btn-text:hover i{
+    transform: scale(1.9);
+  }
+
+  /* Estilo de la animación */
+  .btn-circle::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-out;
+  }
+  
+  /* Animación al hacer hover */
+  .btn-circle:hover::after {
+    transform-origin: right;
+    transform: scaleX(1);
+  }
+  
+  /* Animación al hacer clic */
+  .btn-circle:active::after {
+    transition: transform 0.2s ease-in;
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  
+  #mensaje{
+    display: none;
+  }

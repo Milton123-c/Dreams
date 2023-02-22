@@ -105,15 +105,53 @@ function ofAnimationVisual () {
 }
 
 
-//codigo para las lecturas de los sueños
 const allBoton = document.querySelectorAll("#boton-na");
+
+
 allBoton.forEach(element => {
   element.innerHTML = "Leer sueño 📚📚";
 
   element.addEventListener('click', ()=>{
+    // Para verificar que está seleccionando el botón correcto
+    const tarjeta = element.closest("article");
+  
+    const containerLeer = tarjeta.querySelector(".leer");
+   
+    let leftTarjet = -100;
 
+    function animarLeft () {
+      
+      containerLeer.style.left = leftTarjet + "%";
+
+      if(leftTarjet < 0){
+        leftTarjet += 2;
+        requestAnimationFrame(animarLeft);
+      }else{
+        leftTarjet = -100;
+      }
+    }
+
+    animarLeft();
+
+    const cerrarT = tarjeta.querySelector("#cerrar-tarjeta");
+    cerrarT.addEventListener('click', ()=>{
+     
+    });
+ 
   });
 })
+
+
+
+
+// var botones = document.querySelectorAll(".cambiar-color");
+
+// for (var i = 0; i < botones.length; i++) {
+//   botones[i].addEventListener("click", function() {
+//     var div = this.closest(".contenedor");
+//     div.style.backgroundColor = "red";
+//   });
+// }
 
 
 });
